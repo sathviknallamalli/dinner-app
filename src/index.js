@@ -13,6 +13,17 @@ import {
   Posts,
   Post,
 } from "./components";
+import firebase from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCL4-9jk0tNNBf5M87YCv4iKuFZSz3RsKU",
+  authDomain: "ranking-app-3ad15.firebaseapp.com",
+  projectId: "ranking-app-3ad15",
+  storageBucket: "ranking-app-3ad15.appspot.com",
+  messagingSenderId: "1059209397098",
+  appId: "1:1059209397098:web:f78818ec8134b8e14e1b13",
+  measurementId: "G-0QEX6WBEP2"
+};
 
 ReactDOM.render(
   <Router>
@@ -20,11 +31,6 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/blog" element={<Blog />}>
-        <Route path="" element={<Posts />} />
-        <Route path=":postSlug" element={<Post />} />
-      </Route>
     </Routes>
     <Footer />
   </Router>,

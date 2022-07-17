@@ -1,4 +1,6 @@
 import React from "react";
+import * as firebase from 'firebase/app';
+
 
 function Home() {
   return (
